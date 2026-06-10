@@ -1,54 +1,141 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    text-align: center;
-    padding-top: 50px;
+body{
+    background:#121212;
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
 }
 
-h1 {
-    color: white;
+nav{
+    background:#1e1e1e;
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.5);
 }
 
-.box {
-    background: white;
-    padding: 30px;
-    width: 350px;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+.logo{
+    font-size:22px;
+    font-weight:bold;
 }
 
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
 }
 
-button {
-    background: #4facfe;
-    color: white;
-    padding: 10px;
-    width: 95%;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+.links a:hover{
+    color:#4CAF50;
 }
 
-button:hover {
-    background: #007bff;
+h1{
+    text-align:center;
+    margin-top:30px;
 }
 
-.result {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: green;
+.box{
+    width:90%;
+    max-width:400px;
+
+    margin:30px auto;
+
+    background:#1e1e1e;
+    padding:25px;
+
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+
+    box-sizing:border-box;
 }
 
-.conf {
-    font-size: 14px;
-    color: #333;
+input{
+    width:100%;
+    box-sizing:border-box;
+
+    padding:12px;
+    margin-bottom:12px;
+
+    background:#2a2a2a;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+
+    background:#4CAF50;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    text-align:center;
+}
+
+.conf{
+    margin-top:10px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+@media (max-width: 600px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .links{
+        display:flex;
+        gap:15px;
+    }
+
+    h1{
+        font-size:1.6rem;
+        padding:0 10px;
+    }
+
+    .container{
+        padding:20px;
+    }
+
+}
+.result,
+.conf{
+    word-wrap:break-word;
+}
+
+button{
+    width:100%;
+    padding:14px;
+
+    background:#4CAF50;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:16px;
+    cursor:pointer;
 }
