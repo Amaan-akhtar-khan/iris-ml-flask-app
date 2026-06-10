@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import pickle
+import joblib
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")  # IMPORTANT for servers
@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 # Load your trained model
-model = pickle.load(open("Working Model.pkcls", "rb"))
+model = joblib.load("iris_model.pkl")
 
 
 @app.route("/", methods=["GET"])
